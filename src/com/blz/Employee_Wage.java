@@ -5,14 +5,17 @@ public class Employee_Wage {
     public static final int PARTIAL_PRESENT = 2;
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the Employee wage computation program");
 
         int WAGE_PER_HOUR = 20;
         int Employee_Wage = 0;
+        int MONTHLY_WORKING_DAYS = 20;
         int EmpHr = 0;
+        int TOTAL_WORKING_DAYS = 1;
+        int TOTAL_EMPLOYEE_WAGE = 0;
 
-//Checking employee is present or absent
-
+        System.out.println("Welcome to the Employee wage computation program");
+        for (TOTAL_WORKING_DAYS = 1; TOTAL_WORKING_DAYS <= MONTHLY_WORKING_DAYS; TOTAL_WORKING_DAYS++) {
+        }
         int Empcheck = (int) (Math.random() * 10) % 3;
 
         switch (Empcheck) {
@@ -26,9 +29,12 @@ public class Employee_Wage {
                 break;
             default:
                 System.out.println("Employee is absent");
+
         }
+            TOTAL_EMPLOYEE_WAGE++;
 
         Employee_Wage = EmpHr * WAGE_PER_HOUR;
-        System.out.println("EMployee wage is " + Employee_Wage+ " Per day");
+        TOTAL_EMPLOYEE_WAGE=TOTAL_WORKING_DAYS*Employee_Wage;
+        System.out.println("EMployee Total wage is " + TOTAL_EMPLOYEE_WAGE );
     }
 }
