@@ -5,8 +5,8 @@ public class Employee_Wage {
 
     public static void main(String[] args) {
         System.out.println("Welcome to the Employee wage computation program");
-        int WAGE_PER_HOUR = 8;
-        int FULLTIME_WORKINGHOUR = 20;
+        int WAGE_PER_HOUR = 20;
+        int FULLTIME_WORKINGHOUR = 8;
         int Employee_Wage = 0;
         
 //Checking employee is present or absent
