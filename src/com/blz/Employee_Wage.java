@@ -38,7 +38,7 @@ public class Employee_Wage {
         }
 
         Employee_Wage = TOTAL_WORKING_HOURS * WAGE_PER_HOUR;
-        System.out.println("Employee present for " + TOTAL_WORKING_DAYS + " Days" + TOTAL_WORKING_HOURS + "Hours");
+        System.out.println("Employee worked for " + TOTAL_WORKING_HOURS + "Hours");
         System.out.println("EMployee Total wage is " + Employee_Wage);
     }
 }
