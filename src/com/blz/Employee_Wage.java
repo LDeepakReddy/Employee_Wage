@@ -9,32 +9,36 @@ public class Employee_Wage {
         int WAGE_PER_HOUR = 20;
         int Employee_Wage = 0;
         int MONTHLY_WORKING_DAYS = 20;
+        int MONTHLY_WORKING_HOURS = 100;
         int EmpHr = 0;
         int TOTAL_WORKING_DAYS = 1;
-        int TOTAL_EMPLOYEE_WAGE = 0;
+        int TOTAL_WORKING_HOURS = 0;
+
 
         System.out.println("Welcome to the Employee wage computation program");
-        for (TOTAL_WORKING_DAYS = 1; TOTAL_WORKING_DAYS <= MONTHLY_WORKING_DAYS; TOTAL_WORKING_DAYS++) {
+        while (TOTAL_WORKING_HOURS < MONTHLY_WORKING_HOURS && TOTAL_WORKING_DAYS < MONTHLY_WORKING_DAYS) {
+
+            int Empcheck = (int) (Math.random() * 10) % 3;
+
+            switch (Empcheck) {
+                case IS_PRESENT:
+                    System.out.println("Employee is present");
+                    EmpHr = 8;
+                    break;
+                case PARTIAL_PRESENT:
+                    System.out.println("Employee is working part time");
+                    EmpHr = 4;
+                    break;
+                default:
+                    System.out.println("Employee is absent");
+
+            }
+            TOTAL_WORKING_DAYS++;
+            TOTAL_WORKING_HOURS = EmpHr + TOTAL_WORKING_HOURS;
         }
-        int Empcheck = (int) (Math.random() * 10) % 3;
 
-        switch (Empcheck) {
-            case IS_PRESENT:
-                System.out.println("Employee is present");
-                EmpHr = 8;
-                break;
-            case PARTIAL_PRESENT:
-                System.out.println("Employee is working part time");
-                EmpHr = 4;
-                break;
-            default:
-                System.out.println("Employee is absent");
-
-        }
-            TOTAL_EMPLOYEE_WAGE++;
-
-        Employee_Wage = EmpHr * WAGE_PER_HOUR;
-        TOTAL_EMPLOYEE_WAGE=TOTAL_WORKING_DAYS*Employee_Wage;
-        System.out.println("EMployee Total wage is " + TOTAL_EMPLOYEE_WAGE );
+        Employee_Wage = TOTAL_WORKING_HOURS * WAGE_PER_HOUR;
+        System.out.println("Employee present for " + TOTAL_WORKING_DAYS + " Days" + TOTAL_WORKING_HOURS + "Hours");
+        System.out.println("EMployee Total wage is " + Employee_Wage);
     }
 }
